@@ -20,7 +20,14 @@ public class Dht11TemperatureBlock extends TranslatorBlock
 	public String toCode() throws SocketNullException, SubroutineNotDeclaredException
 	{
 		TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0);
-		String pinNumber = translatorBlock.toCode();
+		if (!(translatorBlock instanceof NumberBlock))
+		{
+			throw new BlockException(this.blockId, "the Pin# of dht11 must a number");
+		}
+		
+		
+		NumberBlock pinNumberBlock = (NumberBlock)translatorBlock;
+		String pinNumber = pinNumberBlock.toCode();
 		String dht11Name = "dht11_pin_" + pinNumber;
 		
 		translator.addHeaderFile("HqcDht11.h");

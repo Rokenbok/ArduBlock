@@ -21,6 +21,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JComponent;
 import javax.swing.filechooser.FileFilter;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
@@ -34,6 +35,8 @@ import com.ardublock.ui.listener.SaveAsButtonListener;
 import com.ardublock.ui.listener.SaveButtonListener;
 
 import edu.mit.blocks.controller.WorkspaceController;
+import edu.mit.blocks.workspace.SearchBar;
+import edu.mit.blocks.workspace.SearchableContainer;
 import edu.mit.blocks.workspace.Workspace;
 
 
@@ -50,6 +53,11 @@ public class OpenblocksFrame extends JFrame
 	
 	private ResourceBundle uiMessageBundle;
 	
+	private JPanel workspacePanel;
+    private SearchBar searchBar;
+
+    
+	
 	public void addListener(OpenblocksFrameListener ofl)
 	{
 		context.registerOpenblocksFrameListener(ofl);
@@ -57,7 +65,7 @@ public class OpenblocksFrame extends JFrame
 	
 	public String makeFrameTitle()
 	{
-		String title = Context.APP_NAME + " " + context.getSaveFileName();
+		String title = Context.APP_NAME + " - ROKENBOK Edition - " + context.getSaveFileName();
 		if (context.isWorkspaceChanged())
 		{
 			title = title + " *";
@@ -70,7 +78,7 @@ public class OpenblocksFrame extends JFrame
 	{
 		context = Context.getContext();
 		this.setTitle(makeFrameTitle());
-		this.setSize(new Dimension(1024, 760));
+		this.setSize(new Dimension(1024, 900));
 		this.setLayout(new BorderLayout());
 		//put the frame to the center of screen
 		this.setLocationRelativeTo(null);
@@ -86,22 +94,41 @@ public class OpenblocksFrame extends JFrame
 		initOpenBlocks();
 	}
 	
+
+	
+	
 	private void initOpenBlocks()
 	{
 		final Context context = Context.getContext();
 		
-		/*
-		WorkspaceController workspaceController = context.getWorkspaceController();
-		JComponent workspaceComponent = workspaceController.getWorkspacePanel();
-		*/
+		final Workspace workspace = context.getWorkspace();	
+		final WorkspaceController workspaceController = context.getWorkspaceController();
 		
-		final Workspace workspace = context.getWorkspace();
+		
+		JComponent workspaceComponent = workspaceController.getWorkspacePanel();
+		
+		
+		
 		
 		// WTF I can't add worksapcelistener by workspace contrller
 		workspace.addWorkspaceListener(new ArdublockWorkspaceListener(this));
 		
+		
+/* 		final SearchBar sb = new SearchBar("Search blocks",
+                "Search for blocks in the drawers and workspace", workspace);
+        for (SearchableContainer con : workspaceController.getAllSearchableContainers()) {
+            sb.addSearchableContainer(con);
+        }
+		sb.getComponent().setPreferredSize(new Dimension(130, 23)); */
+		
+
 		JPanel buttons = new JPanel();
 		buttons.setLayout(new FlowLayout());
+		
+		
+		
+		
+		
 		JButton newButton = new JButton(uiMessageBundle.getString("ardublock.ui.new"));
 		newButton.addActionListener(new NewButtonListener(this));
 		JButton saveButton = new JButton(uiMessageBundle.getString("ardublock.ui.save"));
@@ -145,6 +172,8 @@ public class OpenblocksFrame extends JFrame
 			}
 		});
 
+		//buttons.add(sb.getComponent());
+		
 		buttons.add(newButton);
 		buttons.add(saveButton);
 		buttons.add(saveAsButton);
@@ -168,10 +197,26 @@ public class OpenblocksFrame extends JFrame
 			    }
 			}
 		});
+		JButton ROKwebsiteButton = new JButton("Go to ROKENBOK Website");
+		ROKwebsiteButton.addActionListener(new ActionListener () {
+			public void actionPerformed(ActionEvent e) {
+			    Desktop desktop = Desktop.isDesktopSupported() ? Desktop.getDesktop() : null;
+			    URL url;
+			    if (desktop != null && desktop.isSupported(Desktop.Action.BROWSE)) {
+			        try {
+						url = new URL("http://rokenbokeducation.org/");
+			            desktop.browse(url.toURI());
+			        } catch (Exception e1) {
+			            e1.printStackTrace();
+			        }
+			    }
+			}
+		});
 		JLabel versionLabel = new JLabel("v " + uiMessageBundle.getString("ardublock.ui.version"));
 		
 		bottomPanel.add(saveImageButton);
 		bottomPanel.add(websiteButton);
+		bottomPanel.add(ROKwebsiteButton);
 		bottomPanel.add(versionLabel);
 
 		

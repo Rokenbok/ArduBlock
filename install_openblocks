@@ -1,5 +1,5 @@
 #! /bin/sh
-git clone https://github.com/taweili/openblocks.git && \
+git clone https://github.com/Aerospacesmit/openblocks.git && \
 cd openblocks && \
 mvn install && \
 cd .. && \

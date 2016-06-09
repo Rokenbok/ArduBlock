@@ -16,7 +16,7 @@ public class SerialReadBlock extends TranslatorBlock
 	{
 		translator.addSetupCommand("Serial.begin(9600);");
 		
-		String ret = "Serial.read()";
+		String ret = "Serial.parseInt()";
 		
 		return codePrefix+ret+codeSuffix;
 	}
