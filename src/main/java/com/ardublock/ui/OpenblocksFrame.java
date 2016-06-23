@@ -197,7 +197,24 @@ public class OpenblocksFrame extends JFrame
 			    }
 			}
 		});
-		JButton ROKwebsiteButton = new JButton("Go to ROKENBOK Website");
+		
+		JButton ROKwebsiteButton = new JButton("Get the latest version of ArduBlock");
+		ROKwebsiteButton.addActionListener(new ActionListener () {
+			public void actionPerformed(ActionEvent e) {
+			    Desktop desktop = Desktop.isDesktopSupported() ? Desktop.getDesktop() : null;
+			    URL url;
+			    if (desktop != null && desktop.isSupported(Desktop.Action.BROWSE)) {
+			        try {
+						url = new URL("https://github.com/Aerospacesmith/ardublock/releases/latest");
+			            desktop.browse(url.toURI());
+			        } catch (Exception e1) {
+			            e1.printStackTrace();
+			        }
+			    }
+			}
+		});
+		
+/* 		JButton ROKwebsiteButton = new JButton("Go to ROKENBOK Website");
 		ROKwebsiteButton.addActionListener(new ActionListener () {
 			public void actionPerformed(ActionEvent e) {
 			    Desktop desktop = Desktop.isDesktopSupported() ? Desktop.getDesktop() : null;
@@ -211,8 +228,9 @@ public class OpenblocksFrame extends JFrame
 			        }
 			    }
 			}
-		});
-		JLabel versionLabel = new JLabel("v " + uiMessageBundle.getString("ardublock.ui.version"));
+		}); */
+		
+		JLabel versionLabel = new JLabel("Current Version: " + uiMessageBundle.getString("ardublock.ui.version"));
 		
 		bottomPanel.add(saveImageButton);
 		bottomPanel.add(websiteButton);

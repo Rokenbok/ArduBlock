@@ -8836,6 +8836,21 @@
 			</Images>
 		</BlockGenus>
 
+		<BlockGenus name="rokduino_batteryRead" kind="data" color="153 204 255" initlabel="bg.rokduino_batteryRead">
+			<description>
+				<text>Battery Level</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" />
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/rokenbok/input/batteryRead.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+
+		
 		<BlockGenus name="rokduino_irSensor" kind="data" color="153 204 255" initlabel="bg.rokduino_irSensor">
 			<description>
 				<text>IR Sensor</text>
@@ -10405,6 +10420,8 @@
 				
 				<BlockGenusMember>rokduino_speaker</BlockGenusMember>
 				<BlockGenusMember>rokduino_ledWrite</BlockGenusMember>
+				<BlockGenusMember>rokduino_batteryRead</BlockGenusMember>
+				
 				
 				
 			</BlockDrawer>
