@@ -9389,31 +9389,31 @@
 			</BlockConnectors>
 		</BlockGenus>
 			
-			<BlockGenus name="rokduino_CMD_SOUND_3" kind="data" color="144 172 212" initlabel="bg.rokduino_CMD_SOUND_3" editable-label="no">
-			<BlockConnectors>
-				<BlockConnector connector-type="string" connector-kind="plug" position-type="mirror" />
-			</BlockConnectors>
-		</BlockGenus>
-			
-			<BlockGenus name="rokduino_CMD_SOUND_4" kind="data" color="144 172 212" initlabel="bg.rokduino_CMD_SOUND_4" editable-label="no">
-			<BlockConnectors>
-				<BlockConnector connector-type="string" connector-kind="plug" position-type="mirror" />
-			</BlockConnectors>
-		</BlockGenus>
-			
-			<BlockGenus name="rokduino_CMD_SOUND_5" kind="data" color="144 172 212" initlabel="bg.rokduino_CMD_SOUND_5" editable-label="no">
-			<BlockConnectors>
-				<BlockConnector connector-type="string" connector-kind="plug" position-type="mirror" />
-			</BlockConnectors>
-		</BlockGenus>
-			
-			<BlockGenus name="rokduino_CMD_SOUND_6" kind="data" color="144 172 212" initlabel="bg.rokduino_CMD_SOUND_6" editable-label="no">
-			<BlockConnectors>
-				<BlockConnector connector-type="string" connector-kind="plug" position-type="mirror" />
-			</BlockConnectors>
-		</BlockGenus>
-			
-			<BlockGenus name="rokduino_CMD_HEY_YOU" kind="data" color="144 172 212" initlabel="bg.rokduino_CMD_HEY_YOU" editable-label="no">
+		<BlockGenus name="rokduino_CMD_SOUND_3" kind="data" color="144 172 212" initlabel="bg.rokduino_CMD_SOUND_3" editable-label="no">
+		<BlockConnectors>
+			<BlockConnector connector-type="string" connector-kind="plug" position-type="mirror" />
+		</BlockConnectors>
+	</BlockGenus>
+		
+		<BlockGenus name="rokduino_CMD_SOUND_4" kind="data" color="144 172 212" initlabel="bg.rokduino_CMD_SOUND_4" editable-label="no">
+		<BlockConnectors>
+			<BlockConnector connector-type="string" connector-kind="plug" position-type="mirror" />
+		</BlockConnectors>
+	</BlockGenus>
+		
+		<BlockGenus name="rokduino_CMD_SOUND_5" kind="data" color="144 172 212" initlabel="bg.rokduino_CMD_SOUND_5" editable-label="no">
+		<BlockConnectors>
+			<BlockConnector connector-type="string" connector-kind="plug" position-type="mirror" />
+		</BlockConnectors>
+	</BlockGenus>
+		
+		<BlockGenus name="rokduino_CMD_SOUND_6" kind="data" color="144 172 212" initlabel="bg.rokduino_CMD_SOUND_6" editable-label="no">
+		<BlockConnectors>
+			<BlockConnector connector-type="string" connector-kind="plug" position-type="mirror" />
+		</BlockConnectors>
+	</BlockGenus>
+		
+		<BlockGenus name="rokduino_CMD_HEY_YOU" kind="data" color="144 172 212" initlabel="bg.rokduino_CMD_HEY_YOU" editable-label="no">
 			<BlockConnectors>
 				<BlockConnector connector-type="string" connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>
