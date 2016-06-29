@@ -10395,35 +10395,32 @@
 -->
 			
 <!-- *****************RokDuino***************** -->			
-			<BlockDrawer button-color="255 255 255" name="bd.rokduino.modules" >
+			<BlockDrawer button-color="255 255 255" name="bd.rokduino.inputs" >
 				<BlockGenusMember>rokduino_sensor</BlockGenusMember>
 				<BlockGenusMember>rokduino_button</BlockGenusMember>
 				<BlockGenusMember>rokduino_angle</BlockGenusMember>
 				<BlockGenusMember>rokduino_lightSensor</BlockGenusMember>
-		<!--		<BlockGenusMember>rokduino_irSensor</BlockGenusMember>  -->
 				<BlockGenusMember>rokduino_proxIR</BlockGenusMember>
 				<BlockGenusMember>rokduino_gateIR</BlockGenusMember>
-				
+				<BlockGenusMember>rokduino_batteryRead</BlockGenusMember>
+			</BlockDrawer>
+			
+			<BlockDrawer button-color="255 255 255" name="bd.rokduino.outputs" >
 				<BlockGenusMember>rokduino_motor</BlockGenusMember>
 				<BlockGenusMember>rokduino_light</BlockGenusMember>
-				
-				<BlockGenusMember>rokduino_setter_variable_byte</BlockGenusMember>
-				<BlockGenusMember>rokduino_variable_byte</BlockGenusMember>
-				
+				<BlockGenusMember>rokduino_speaker</BlockGenusMember>
+				<BlockGenusMember>rokduino_ledWrite</BlockGenusMember>
+			</BlockDrawer>
+			
+			<BlockDrawer button-color="255 255 255" name="bd.rokduino.ircommands" >
 				<BlockGenusMember>rokduino_irWrite</BlockGenusMember>
 				<BlockGenusMember>rokduino_irRead</BlockGenusMember>
-				
+				<BlockGenusMember>rokduino_setter_variable_byte</BlockGenusMember>
+				<BlockGenusMember>rokduino_variable_byte</BlockGenusMember>
 				<BlockGenusMember>rokduino_switch_byte</BlockGenusMember>
 				<BlockGenusMember>rokduino_case_byte</BlockGenusMember>
 				<BlockGenusMember>rokduino_defaultCase</BlockGenusMember>
-				<BlockGenusMember>break</BlockGenusMember>
-				
-				<BlockGenusMember>rokduino_speaker</BlockGenusMember>
-				<BlockGenusMember>rokduino_ledWrite</BlockGenusMember>
-				<BlockGenusMember>rokduino_batteryRead</BlockGenusMember>
-				
-				
-				
+				<BlockGenusMember>break</BlockGenusMember>	
 			</BlockDrawer>
 			
 			<BlockDrawer button-color="255 255 255" name="bd.rokduino.constants" >
@@ -10438,8 +10435,6 @@
 				<BlockGenusMember>rokduino_LED_OFF</BlockGenusMember>
 				<BlockGenusMember>rokduino_LED_ON</BlockGenusMember>
 				<BlockGenusMember>rokduino_LED_TOGGLE</BlockGenusMember>
-				
-				
 				
 				<BlockGenusMember>rokduino_CMD_STOP</BlockGenusMember>
 				<BlockGenusMember>rokduino_CMD_FORWARD</BlockGenusMember>
