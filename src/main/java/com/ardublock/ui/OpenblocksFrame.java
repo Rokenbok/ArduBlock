@@ -230,7 +230,7 @@ public class OpenblocksFrame extends JFrame
 			}
 		});
 		
-		JLabel versionLabel = new JLabel("Current Version: " + uiMessageBundle.getString("ardublock.ui.version"));
+		JLabel versionLabel = new JLabel("Installed Version: " + uiMessageBundle.getString("ardublock.ui.version"));
 		
 		bottomPanel.add(saveImageButton);
 		//bottomPanel.add(websiteButton);
