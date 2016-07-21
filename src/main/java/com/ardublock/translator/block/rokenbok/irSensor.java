@@ -18,7 +18,7 @@ public class irSensor extends TranslatorBlock
 	public String toCode() throws SocketNullException, SubroutineNotDeclaredException
 	{
 		
-		String ret = "rok.sensorRead( 3 )";
+		String ret = "rok.sensorRead( 8 )";
 		
 		translator.addHeaderFile("ROKduino.h");
 		translator.addDefinitionCommand("ROKduino rok;");

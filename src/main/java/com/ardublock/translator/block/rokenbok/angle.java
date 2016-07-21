@@ -25,9 +25,9 @@ public class angle extends TranslatorBlock
 		
 		if (angle.isInteger(ChannelNumber))
 		{
-	 		if (Integer.parseInt(ChannelNumber) > 8 || Integer.parseInt(ChannelNumber) < 4) 
+	 		if (Integer.parseInt(ChannelNumber) > 8 || Integer.parseInt(ChannelNumber) < 1)
 			{
-				throw new BlockException(this.blockId, "the Port# of an Angle Sensor must be 4-8");
+				throw new BlockException(this.blockId, "the Port# of a sensor must be 1-8");
 				//ChannelNumber = "8";
 			}
 		}
