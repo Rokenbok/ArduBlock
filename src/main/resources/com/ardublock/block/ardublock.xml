@@ -8807,7 +8807,7 @@
 				<text>Angle Sensor</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="socket" label="Port # (4-8)">
+				<BlockConnector connector-type="number" connector-kind="socket" label="Port # (1-7)">
 					<DefaultArg genus-name="number" label="4" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="plug" />
@@ -8824,7 +8824,7 @@
 				<text>Light Sensor</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="socket" label="Port # (4-8)">
+				<BlockConnector connector-type="number" connector-kind="socket" label="Port # (1-7)"">
 					<DefaultArg genus-name="number" label="4" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="plug" />
