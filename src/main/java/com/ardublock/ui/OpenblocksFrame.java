@@ -126,9 +126,6 @@ public class OpenblocksFrame extends JFrame
 		buttons.setLayout(new FlowLayout());
 		
 		
-		
-		
-		
 		JButton newButton = new JButton(uiMessageBundle.getString("ardublock.ui.new"));
 		newButton.addActionListener(new NewButtonListener(this));
 		JButton saveButton = new JButton(uiMessageBundle.getString("ardublock.ui.save"));
