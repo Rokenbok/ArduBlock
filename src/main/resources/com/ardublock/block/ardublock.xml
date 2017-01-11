@@ -9344,6 +9344,56 @@
 			</BlockConnectors>
 		</BlockGenus>
 		
+		<BlockGenus name="rokduino_CMD_XY_MOTOR_CLOCKWISE" kind="data" color="144 172 212" initlabel="bg.rokduino_CMD_XY_MOTOR_CLOCKWISE" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="rokduino_CMD_XY_MOTOR_COUNTER_CLOCKWISE" kind="data" color="144 172 212" initlabel="bg.rokduino_CMD_XY_MOTOR_COUNTER_CLOCKWISE" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+
+		<BlockGenus name="rokduino_CMD_Y_BUTTON" kind="data" color="144 172 212" initlabel="bg.rokduino_CMD_Y_BUTTON" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="rokduino_CMD_X_BUTTON" kind="data" color="144 172 212" initlabel="bg.rokduino_CMD_X_BUTTON" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+
+		<BlockGenus name="rokduino_CMD_B_BUTTON" kind="data" color="144 172 212" initlabel="bg.rokduino_CMD_B_BUTTON" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="rokduino_CMD_A_BUTTON" kind="data" color="144 172 212" initlabel="bg.rokduino_CMD_A_BUTTON" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="rokduino_CMD_AB_MOTOR_CLOCKWISE" kind="data" color="144 172 212" initlabel="bg.rokduino_CMD_AB_MOTOR_CLOCKWISE" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="rokduino_CMD_AB_MOTOR_COUNTER_CLOCKWISE" kind="data" color="144 172 212" initlabel="bg.rokduino_CMD_AB_MOTOR_COUNTER_CLOCKWISE" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		
+		
+		
 		<BlockGenus name="rokduino_CMD_TRIM_RIGHT" kind="data" color="144 172 212" initlabel="bg.rokduino_CMD_TRIM_RIGHT" editable-label="no">
 			<BlockConnectors>
 				<BlockConnector connector-type="string" connector-kind="plug" position-type="mirror" />
@@ -10461,6 +10511,16 @@
 				<BlockGenusMember>rokduino_CMD_MOTOR_4_FORWARD</BlockGenusMember>
 				<BlockGenusMember>rokduino_CMD_MOTOR_4_BACKWARD</BlockGenusMember>
 				<BlockGenusMember>rokduino_CMD_MOTOR_4_STOP</BlockGenusMember>
+				
+				<BlockGenusMember>rokduino_CMD_XY_MOTOR_CLOCKWISE</BlockGenusMember>
+				<BlockGenusMember>rokduino_CMD_XY_MOTOR_COUNTER_CLOCKWISE</BlockGenusMember>
+				<BlockGenusMember>rokduino_CMD_AB_MOTOR_CLOCKWISE</BlockGenusMember>
+				<BlockGenusMember>rokduino_CMD_AB_MOTOR_COUNTER_CLOCKWISE</BlockGenusMember>
+				
+				<BlockGenusMember>rokduino_CMD_Y_BUTTON</BlockGenusMember>
+				<BlockGenusMember>rokduino_CMD_X_BUTTON</BlockGenusMember>
+				<BlockGenusMember>rokduino_CMD_B_BUTTON</BlockGenusMember>
+				<BlockGenusMember>rokduino_CMD_A_BUTTON</BlockGenusMember>
 				
 				<BlockGenusMember>rokduino_CMD_TRIM_RIGHT</BlockGenusMember>
 				<BlockGenusMember>rokduino_CMD_TRIM_LEFT</BlockGenusMember>

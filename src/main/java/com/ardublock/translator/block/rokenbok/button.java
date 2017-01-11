@@ -36,7 +36,7 @@ public class button extends TranslatorBlock
 		
 		String buttonName = "button_" + ChannelNumber;
 		
-		String ret = "rok.sensorRead( " + ChannelNumber + " )";
+		String ret = "(rok.sensorRead( " + ChannelNumber + ") > 512 )";
 		translator.addHeaderFile("ROKduino.h");
 		translator.addDefinitionCommand("ROKduino rok;");
 		
