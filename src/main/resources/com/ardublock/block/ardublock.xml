@@ -10402,7 +10402,7 @@
 				<BlockGenusMember>rokduino_lightSensor</BlockGenusMember>
 				<BlockGenusMember>rokduino_proxIR</BlockGenusMember>
 				<BlockGenusMember>rokduino_gateIR</BlockGenusMember>
-				<BlockGenusMember>rokduino_batteryRead</BlockGenusMember>
+				<!-- <BlockGenusMember>rokduino_batteryRead</BlockGenusMember> -->
 			</BlockDrawer>
 			
 			<BlockDrawer button-color="255 255 255" name="bd.rokduino.outputs" >
