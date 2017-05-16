@@ -8773,7 +8773,7 @@
 				<text>sensorRead</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="socket" label="Port # (1-8)">
+				<BlockConnector connector-type="number" connector-kind="socket" label="Input # (1-8)">
 					<DefaultArg genus-name="number" label="1" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="plug" />
@@ -8790,7 +8790,7 @@
 				<text>Bump Sensor</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="socket" label="Port #(1-8)">
+				<BlockConnector connector-type="number" connector-kind="socket" label="Input # (1-8)">
 					<DefaultArg genus-name="number" label="1" />
 				</BlockConnector>
 				<BlockConnector connector-type="boolean" connector-kind="plug" />
@@ -8807,7 +8807,7 @@
 				<text>Angle Sensor</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="socket" label="Port # (1-7)">
+				<BlockConnector connector-type="number" connector-kind="socket" label="Input # (1-7)">
 					<DefaultArg genus-name="number" label="4" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="plug" />
@@ -8824,7 +8824,7 @@
 				<text>Light Sensor</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="socket" label="Port # (1-7)">
+				<BlockConnector connector-type="number" connector-kind="socket" label="Input # (1-7)">
 					<DefaultArg genus-name="number" label="4" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="plug" />
@@ -8873,7 +8873,7 @@
 				<text>Motor Module</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="socket" label="Motor #(1-4)">
+				<BlockConnector connector-type="number" connector-kind="socket" label="Output # (1-4)">
 					<DefaultArg genus-name="number" label="1" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="Speed">
@@ -8895,7 +8895,7 @@
 				<text>Light Module</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="socket" label="Light #(1-4)">
+				<BlockConnector connector-type="number" connector-kind="socket" label="Output # (1-4)">
 					<DefaultArg genus-name="number" label="1" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="Brightness">
@@ -9356,6 +9356,30 @@
 			</BlockConnectors>
 		</BlockGenus>
 
+		<BlockGenus name="rokduino_CMD_XY_MOTOR_STOP" kind="data" color="144 172 212" initlabel="bg.rokduino_CMD_XY_MOTOR_STOP" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="rokduino_CMD_AB_MOTOR_CLOCKWISE" kind="data" color="144 172 212" initlabel="bg.rokduino_CMD_AB_MOTOR_CLOCKWISE" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="rokduino_CMD_AB_MOTOR_COUNTER_CLOCKWISE" kind="data" color="144 172 212" initlabel="bg.rokduino_CMD_AB_MOTOR_COUNTER_CLOCKWISE" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="rokduino_CMD_AB_MOTOR_STOP" kind="data" color="144 172 212" initlabel="bg.rokduino_CMD_AB_MOTOR_STOP" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		
 		<BlockGenus name="rokduino_CMD_Y_BUTTON" kind="data" color="144 172 212" initlabel="bg.rokduino_CMD_Y_BUTTON" editable-label="no">
 			<BlockConnectors>
 				<BlockConnector connector-type="string" connector-kind="plug" position-type="mirror" />
@@ -9380,18 +9404,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 		
-		<BlockGenus name="rokduino_CMD_AB_MOTOR_CLOCKWISE" kind="data" color="144 172 212" initlabel="bg.rokduino_CMD_AB_MOTOR_CLOCKWISE" editable-label="no">
-			<BlockConnectors>
-				<BlockConnector connector-type="string" connector-kind="plug" position-type="mirror" />
-			</BlockConnectors>
-		</BlockGenus>
-		
-		<BlockGenus name="rokduino_CMD_AB_MOTOR_COUNTER_CLOCKWISE" kind="data" color="144 172 212" initlabel="bg.rokduino_CMD_AB_MOTOR_COUNTER_CLOCKWISE" editable-label="no">
-			<BlockConnectors>
-				<BlockConnector connector-type="string" connector-kind="plug" position-type="mirror" />
-			</BlockConnectors>
-		</BlockGenus>
-		
+
 		
 		
 		<BlockGenus name="rokduino_CMD_TRIM_RIGHT" kind="data" color="144 172 212" initlabel="bg.rokduino_CMD_TRIM_RIGHT" editable-label="no">
@@ -10476,6 +10489,7 @@
 			<BlockDrawer button-color="255 255 255" name="bd.rokduino.constants" >
 				<BlockGenusMember>rokduino_CLOCKWISE</BlockGenusMember>
 				<BlockGenusMember>rokduino_COUNTER_CLOCKWISE</BlockGenusMember>
+				
 				<BlockGenusMember>rokduino_RED</BlockGenusMember>
 				<BlockGenusMember>rokduino_GREEN</BlockGenusMember>
 				
@@ -10514,8 +10528,11 @@
 				
 				<BlockGenusMember>rokduino_CMD_XY_MOTOR_CLOCKWISE</BlockGenusMember>
 				<BlockGenusMember>rokduino_CMD_XY_MOTOR_COUNTER_CLOCKWISE</BlockGenusMember>
+				<BlockGenusMember>rokduino_CMD_XY_MOTOR_STOP</BlockGenusMember>
 				<BlockGenusMember>rokduino_CMD_AB_MOTOR_CLOCKWISE</BlockGenusMember>
 				<BlockGenusMember>rokduino_CMD_AB_MOTOR_COUNTER_CLOCKWISE</BlockGenusMember>
+				<BlockGenusMember>rokduino_CMD_AB_MOTOR_STOP</BlockGenusMember>
+				
 				
 				<BlockGenusMember>rokduino_CMD_Y_BUTTON</BlockGenusMember>
 				<BlockGenusMember>rokduino_CMD_X_BUTTON</BlockGenusMember>
