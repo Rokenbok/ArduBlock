@@ -9075,7 +9075,7 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector label="Interval" connector-kind="socket" connector-type="number">
-					<DefaultArg genus-name="variable_number" label="integer variable name" />
+					<DefaultArg genus-name="number" label="5000" />
 				</BlockConnector>
 				<BlockConnector label="Execute after wait" connector-kind="socket" connector-type="cmd" />
 			</BlockConnectors>
