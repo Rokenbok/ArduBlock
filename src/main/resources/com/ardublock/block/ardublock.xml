@@ -9067,6 +9067,21 @@
 			</BlockConnectors>
 		</BlockGenus>
 		
+		<BlockGenus name="rokduino_noDelay" kind="command" initlabel="bg.rokduino_noDelay" color="193 255 36">
+			<description>
+				<text>
+					No Delay
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector label="Interval" connector-kind="socket" connector-type="number">
+					<DefaultArg genus-name="variable_number" label="integer variable name" />
+				</BlockConnector>
+				<BlockConnector label="Execute after wait" connector-kind="socket" connector-type="cmd" />
+			</BlockConnectors>
+		</BlockGenus>
+		
+		
 		
 		
 	<!-- IR -->
@@ -9937,6 +9952,8 @@
 				<BlockGenusMember>rokduino_switch</BlockGenusMember>
 				<BlockGenusMember>rokduino_case</BlockGenusMember>
 				
+				<BlockGenusMember>rokduino_noDelay</BlockGenusMember>
+				
 				
 				<BlockGenusMember>break</BlockGenusMember>
 				<BlockGenusMember>subroutine</BlockGenusMember>
@@ -10484,6 +10501,7 @@
 				<BlockGenusMember>rokduino_case_byte</BlockGenusMember>
 				<BlockGenusMember>rokduino_defaultCase</BlockGenusMember>
 				<BlockGenusMember>break</BlockGenusMember>	
+				<BlockGenusMember>rokduino_noDelay</BlockGenusMember>
 			</BlockDrawer>
 			
 			<BlockDrawer button-color="255 255 255" name="bd.rokduino.constants" >
