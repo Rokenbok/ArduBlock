@@ -9067,6 +9067,31 @@
 			</BlockConnectors>
 		</BlockGenus>
 		
+		<BlockGenus name="rokduino_noDelay" kind="command" initlabel="bg.rokduino_noDelay" color="193 255 36">
+			<description>
+				<text>
+					Timer
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector label="Interval" connector-kind="socket" connector-type="number">
+					<DefaultArg genus-name="number" label="5000" />
+				</BlockConnector>
+				<BlockConnector label="Execute after Interval" connector-kind="socket" connector-type="cmd" />
+			</BlockConnectors>
+		</BlockGenus>
+
+		<BlockGenus name="rokduino_boolToInt" kind="function" initlabel="bg.rokduino_boolToInt" color="222 131 51">
+			<description>
+				<text>
+					Bool To Int
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-kind="plug" connector-type="number" />
+				<BlockConnector connector-kind="socket" connector-type="boolean" />
+			</BlockConnectors>
+		</BlockGenus>
 		
 		
 	<!-- IR -->
@@ -9937,6 +9962,8 @@
 				<BlockGenusMember>rokduino_switch</BlockGenusMember>
 				<BlockGenusMember>rokduino_case</BlockGenusMember>
 				
+				<BlockGenusMember>rokduino_noDelay</BlockGenusMember>
+				
 				
 				<BlockGenusMember>break</BlockGenusMember>
 				<BlockGenusMember>subroutine</BlockGenusMember>
@@ -9986,6 +10013,7 @@
 				<BlockGenusMember>string_toInt</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="120 219 55" name="bd.operators" type="factory">
+				<BlockGenusMember>rokduino_boolToInt</BlockGenusMember>
 				<BlockGenusMember>addition</BlockGenusMember>
 				<BlockGenusMember>subtraction</BlockGenusMember>
 				<BlockGenusMember>multiplication</BlockGenusMember>
@@ -10484,6 +10512,7 @@
 				<BlockGenusMember>rokduino_case_byte</BlockGenusMember>
 				<BlockGenusMember>rokduino_defaultCase</BlockGenusMember>
 				<BlockGenusMember>break</BlockGenusMember>	
+				<BlockGenusMember>rokduino_noDelay</BlockGenusMember>
 			</BlockDrawer>
 			
 			<BlockDrawer button-color="255 255 255" name="bd.rokduino.constants" >
